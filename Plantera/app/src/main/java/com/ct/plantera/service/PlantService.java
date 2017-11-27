@@ -5,6 +5,9 @@ import com.ct.plantera.dao.PlantDAOStub;
 import com.ct.plantera.dao.PlantJSONDao;
 import com.ct.plantera.dto.PlantDTO;
 
+import org.json.JSONException;
+
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -20,7 +23,7 @@ public class PlantService implements IPlantService {
     }
 
     @Override
-    public List<PlantDTO> fetchPlants(String filter) {
+    public List<PlantDTO> fetchPlants(String filter) throws IOException, JSONException {
         return iPlantDAO.fetchPlants(filter);
     }
 }

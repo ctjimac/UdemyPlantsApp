@@ -2,6 +2,9 @@ package com.ct.plantera.dao;
 
 import com.ct.plantera.dto.PlantDTO;
 
+import org.json.JSONException;
+
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -15,5 +18,5 @@ public interface IPlantDAO {
      * @param filter plant text filter
      * @return a list of plants that contains the filter text
      */
-    List<PlantDTO> fetchPlants(String filter);
+    List<PlantDTO> fetchPlants(String filter) throws IOException, JSONException;
 }

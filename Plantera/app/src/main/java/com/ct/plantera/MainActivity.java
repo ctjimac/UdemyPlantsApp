@@ -10,6 +10,9 @@ import com.ct.plantera.dto.PlantDTO;
 import com.ct.plantera.service.IPlantService;
 import com.ct.plantera.service.PlantService;
 
+import org.json.JSONException;
+
+import java.io.IOException;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         plantService = new PlantService();
     }
 
-    public void searchPlants(View v) {
+    public void searchPlants(View v) throws IOException, JSONException {
         List<PlantDTO> plantDTOs = plantService.fetchPlants(actPlantName.getText().toString());
 
         for(PlantDTO plantDTO : plantDTOs){
