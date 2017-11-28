@@ -18,8 +18,8 @@ public class PlantsDAO implements IPlantDAO {
 
     private NetworkDAO networkDAO;
 
-    public PlantsDAO(){
-        this.networkDAO = new NetworkDAO();
+    public PlantsDAO(NetworkDAO networkDAO){
+        this.networkDAO = networkDAO;
     }
 
     @Override
@@ -46,5 +46,13 @@ public class PlantsDAO implements IPlantDAO {
         }
 
         return allPlants;
+    }
+
+    public NetworkDAO getNetworkDAO() {
+        return networkDAO;
+    }
+
+    public void setNetworkDAO(NetworkDAO networkDAO) {
+        this.networkDAO = networkDAO;
     }
 }

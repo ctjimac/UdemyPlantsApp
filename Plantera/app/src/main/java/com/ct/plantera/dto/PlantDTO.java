@@ -83,4 +83,14 @@ public class PlantDTO {
         this.type = type;
     }
 
+
+    @Override
+    public boolean equals(Object obj) {
+        PlantDTO plantDTO = (PlantDTO) obj;
+
+        if(genus.equals(plantDTO.getGenus()))
+            return true;
+
+        return super.equals(obj);
+    }
 }

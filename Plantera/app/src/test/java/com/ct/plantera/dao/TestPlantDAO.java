@@ -1,4 +1,4 @@
-package com.ct.plantera;
+package com.ct.plantera.dao;
 
 import com.ct.plantera.dao.IPlantDAO;
 import com.ct.plantera.dao.PlantDAOStub;

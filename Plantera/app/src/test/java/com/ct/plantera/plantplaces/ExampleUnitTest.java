@@ -1,4 +1,4 @@
-package com.ct.plantera;
+package com.ct.plantera.plantplaces;
 
 import org.junit.Test;
 

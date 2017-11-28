@@ -1,8 +1,10 @@
 package com.ct.plantera.service;
 
 import com.ct.plantera.dao.IPlantDAO;
+import com.ct.plantera.dao.NetworkDAO;
 import com.ct.plantera.dao.PlantDAOStub;
 import com.ct.plantera.dao.PlantJSONDao;
+import com.ct.plantera.dao.PlantsDAO;
 import com.ct.plantera.dto.PlantDTO;
 
 import org.json.JSONException;
@@ -19,7 +21,7 @@ public class PlantService implements IPlantService {
     IPlantDAO iPlantDAO;
 
     public PlantService(){
-        this.iPlantDAO = new PlantDAOStub();
+        this.iPlantDAO = new PlantsDAO(new NetworkDAO());
     }
 
     @Override
